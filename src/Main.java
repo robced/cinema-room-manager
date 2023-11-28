@@ -60,7 +60,7 @@ public class Main {
         }
     }
 
-    private static void printStatistics(String[][] cinemaRoomMap, Cinema cinemaRoom) {
+    private static void printStatistics(Cinema cinemaRoom) {
         int purchasedTickets = cinemaRoom.getPurchasedTickets();
         System.out.println("Number of purchased tickets: " + purchasedTickets);
         System.out.printf("Percentage: %.2f%%%n", ( (float) purchasedTickets / cinemaRoom.getNumberOfSeats() * 100 ));
@@ -97,7 +97,7 @@ public class Main {
                 }
 
                 case 3: {
-                    printStatistics(cinemaRoomMap, cinemaRoom);
+                    printStatistics(cinemaRoom);
                     break;
                 }
 

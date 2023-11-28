@@ -1,20 +1,15 @@
 import java.util.Arrays;
 
 public class Cinema {
-    private final int numberOfRows;
-    private final int numberOfColumns;
-
     private int purchasedTickets = 0;
     private int currentIncome = 0;
     private int numberOfSeats = 0;
     private int totalIncome = 0;
-    private String[][] cinemaSeats;
+    private final String[][] cinemaSeats;
 
 
     public Cinema(int numberOfRows, int numberOfColumns) {
         this.cinemaSeats = buildCinemaRoom(numberOfRows, numberOfColumns);
-        this.numberOfRows = cinemaSeats.length;
-        this.numberOfColumns = cinemaSeats[0].length;
         this.numberOfSeats = calculateNumberOfSeats(cinemaSeats);
         this.totalIncome = calculateTotalIncome(cinemaSeats,numberOfSeats);
     }
